@@ -1,0 +1,6 @@
+{
+  "name": "Control",
+  "main": "./Control.jsx",
+  "private": true,
+  "version": "0.0.0"
+}

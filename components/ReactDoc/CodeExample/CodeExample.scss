@@ -1,0 +1,94 @@
+@import '../../variables.css';
+@import '../../../css/common.scss';
+@import '../../Roboto/Roboto.scss';
+
+.root {
+  width: 100%;
+  margin: 5px 0;
+  box-shadow: 0 2px 2px 0 var(--dark-divider-color), 0 0 2px 0 var(--dark-divider-color);
+}
+
+.description {
+  font-family: Roboto-Medium;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  padding: 8px 16px;
+}
+
+.codeContainer {
+  align-items: stretch;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+.preview {
+  align-self: stretch;
+  flex-grow: 1;
+  background-color: var(--white-color);
+  background-image: linear-gradient(45deg, var(--dark-hover-color) 25%, transparent 25%, transparent 75%, var(--dark-hover-color) 75%, var(--dark-hover-color)), linear-gradient(45deg, var(--dark-hover-color) 25%, transparent 25%, transparent 75%, var(--dark-hover-color) 75%, var(--dark-hover-color));
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+}
+
+.previewBorder {
+  border: 15px solid #ccc;
+}
+
+.previewPadding {
+  padding: 15px;
+}
+
+.showRulers {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #5ccae6;
+    z-index: 1;
+  }
+
+  &::before {
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+
+  &::after {
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 1px;
+  }
+}
+
+.code {
+  width: 450px;
+  background-color: #2d2d2d;
+  position: relative;
+
+  pre {
+    margin: 0;
+  }
+}
+
+.toolbar {
+  background: var(--white-color);
+  padding: 4px 20px 5px;
+  position: relative;
+  z-index: 1;
+
+  label {
+    font-size: 13px;
+    margin-right: 20px;
+
+    input {
+      margin-right: 4px;
+    }
+  }
+}

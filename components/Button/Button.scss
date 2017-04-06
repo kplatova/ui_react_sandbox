@@ -1,0 +1,216 @@
+@import '../variables.css';
+@import '../../css/common.scss';
+@import '../MaterialIcons/MaterialIcons.scss';
+@import '../Roboto/Roboto.scss';
+
+/* Базовый стиль для всех кнопок. */
+
+.root {
+  font-family: Roboto-Medium;
+  font-size: var(--button-font-size);
+  font-weight: 500;
+  display: inline-flex;
+  align-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  & + &:not(.fullWidth) {
+    margin-left: 16px;
+  }
+
+  & + &.fullWidth {
+    margin-top: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 1, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:active {
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 1, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+/* Кнопка primary.
+   Зеленый фон, белый текст */
+
+.primary {
+  height: 36px;
+  padding: 0 16px;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 2px 0 var(--dark-divider-color), 0 0 2px 0 var(--dark-divider-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--primary-color-hover);
+    box-shadow: 0 3px 3px 0 var(--dark-divider-color), 0 0 3px 0 var(--dark-divider-color);
+  }
+
+  &:active {
+    background-color: var(--primary-color-active);
+    box-shadow: 0 1px 1px 0 var(--dark-pressed-color), 0 0 1px 0 var(--dark-divider-color);
+  }
+}
+
+/* Кнопка secondary.
+   Зеленый текст, белый фон */
+
+.secondary {
+  padding: 0 16px;
+  height: 36px;
+  color: var(--primary-color);
+  box-shadow: 0 2px 2px 0 var(--dark-divider-color), 0 0 2px 0 var(--dark-divider-color);
+  background-color: var(--white-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--white-color);
+    box-shadow: 0 3px 3px 0 var(--dark-divider-color), 0 0 3px 0 var(--dark-divider-color);
+    color: var(--primary-color-hover);
+  }
+
+  &:active {
+    background-color: var(--white-color);
+    box-shadow: 0 1px 1px 0 var(--dark-pressed-color), 0 0 1px 0 var(--dark-divider-color);
+    color: var(--primary-color-active);
+  }
+}
+
+/* Кнопка flat minimal.
+   Зеленый текст, без фона */
+
+.minimal {
+  background-color: transparent;
+  color: var(--primary-color);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-color-hover);
+  }
+
+  &:active {
+    color: var(--primary-color-active);
+  }
+}
+
+/* Кнопка flat minimal light для зеленого фона.
+   Белый текст, без фона */
+
+.minimallight {
+  background-color: transparent;
+  color: var(--white-color);
+
+  &:hover,
+  &:focus {
+    color: var(--light-secondary-color);
+  }
+
+  &:active {
+    color: var(--white-color);
+  }
+}
+
+/* Кнопка flat standart для зеленого фона.
+   Белый текст, с внутренними отступами
+   и фоном при наведении и нажатии */
+
+.flat {
+  composes: minimal;
+  background-color: transparent;
+  padding: 0 8px;
+  height: 36px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--dark-hover-color);
+  }
+}
+
+/* Кнопка flat standart light для зеленого фона.
+   Белый текст, с внутренними отступами
+   и фоном при наведении и нажатии */
+
+.flatlight {
+  composes: minimallight;
+  height: 36px;
+  padding: 0 8px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--light-hover-background-color);
+  }
+
+  &:active {
+    background-color: var(--light-pressed-color);
+  }
+}
+
+/* Модификатор для кнопок secondary,
+   flat (standart и minimal),
+   flat light (standart и minimal)
+   Красный текст */
+
+.danger {
+  color: var(--secondary-color);
+
+  &:hover,
+  &:focus {
+    color: var(--secondary-color-hover);
+  }
+
+  &:active {
+    color: var(--secondary-color-active);
+  }
+}
+
+/* Модификатор для состояния
+   disabled всех кнопок */
+
+.disabled,
+.disabled:hover,
+.disabled:focus,
+.disabled:active {
+  background-color: var(--dark-divider-color);
+  box-shadow: none;
+  color: var(--dark-inactive-color);
+}
+
+.minimal.disabled,
+.minimal.disabled:hover,
+.minimal.disabled:focus,
+.minimal.disabled:active {
+  background-color: transparent;
+}
+
+.minimallight.disabled,
+.minimallight.disabled:hover,
+.minimallight.disabled:focus,
+.minimallight.disabled:active {
+  background-color: transparent;
+  color: var(--light-inactive-color);
+}
+
+.fullWidth {
+  width: 100%;
+}

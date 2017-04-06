@@ -1,0 +1,19 @@
+@import '../variables.css';
+@import '../../css/common.scss';
+
+.root {
+  padding: 16px;
+}
+
+.white {
+  background-color: white;
+}
+
+.green {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 2px 0 var(--dark-divider-color), 0 0 2px 0 var(--dark-divider-color);
+}
+
+.gray {
+  background-color: var(--dark-divider-color);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ButtonsList",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ButtonsList.jsx"
+}

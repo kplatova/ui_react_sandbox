@@ -1,0 +1,78 @@
+@import '../variables.css';
+@import '../../css/common.scss';
+@import '../Roboto/Roboto.scss';
+
+/* Root -- базовый стиль для всех классов typography. */
+.root {
+  font-family: Roboto;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.body {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 13px;
+  line-height: 1.23;
+}
+
+.pageheader {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+}
+
+.headline1 {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 23px;
+  line-height: 1.22;
+}
+
+.headline2 {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 23px;
+  line-height: 1.39;
+}
+
+.title {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 19px;
+  line-height: 1.47;
+  text-transform: uppercase;
+}
+
+.subheader1 {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.subheader2 {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.caps {
+  composes: body;
+  text-transform: uppercase;
+}
+
+.caption {
+  composes: root;
+  color: var(--dark-primary-color);
+  font-size: 12px;
+  line-height: 1.33;
+}

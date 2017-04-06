@@ -1,0 +1,48 @@
+@import '../variables.css';
+
+.root {
+  display: inline-block;
+  text-align: center;
+  margin: 0 40px 40px 0;
+  width: 200px;
+}
+
+.green {
+  color: var(--primary-color);
+}
+
+.red {
+  color: var(--secondary-color);
+}
+
+.white {
+  color: var(--white-color);
+}
+
+.black {
+  color: var(--black-color);
+}
+
+.yellow {
+  color: var(--accent-color);
+}
+
+.xsmall {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.small {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.medium {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.xlarge {
+  font-size: 96px;
+  line-height: 96px;
+}

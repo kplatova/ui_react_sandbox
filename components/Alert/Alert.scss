@@ -1,0 +1,123 @@
+@import '../variables.css';
+@import '../../css/common.scss';
+@import '../MaterialIcons/MaterialIcons.scss';
+@import '../Roboto/Roboto.scss';
+
+.root {
+  background: var(--alert-background-color);
+  border-radius: var(--alert-border-radius);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  color: var(--dark-secondary-color);
+  font-size: 15px;
+  padding: 18px;
+  text-align: left;
+  transition: left 0.2s ease 0s;
+  z-index: 100;
+  position: relative;
+  display: flex;
+
+  &::before {
+    border: 7px solid transparent;
+    content: '';
+    display: inline-block;
+    position: absolute;
+  }
+
+  &.green {
+    background: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  &.black {
+    background: var(--black-color);
+    color: var(--white-color);
+  }
+
+  &.coral {
+    background: var(--secondary-color);
+  }
+}
+
+/* Положение хвоста у алерта */
+
+.topLeft {
+  &::before {
+    border-bottom-color: var(--alert-background-color);
+    left: 18px;
+    top: -14px;
+  }
+
+  &.green::before {
+    border-bottom-color: var(--primary-color);
+  }
+
+  &.black::before {
+    border-bottom-color: var(--black-color);
+  }
+
+  &.coral::before {
+    border-bottom-color: var(--secondary-color);
+  }
+}
+
+.topCenter {
+  &::before {
+    border-bottom-color: var(--alert-background-color);
+    left: 50%;
+    margin-left: -5px;
+    top: -14px;
+  }
+
+  &.green::before {
+    border-bottom-color: var(--primary-color);
+  }
+
+  &.black::before {
+    border-bottom-color: var(--black-color);
+  }
+
+  &.coral::before {
+    border-bottom-color: var(--secondary-color);
+  }
+}
+
+.topRight {
+  &::before {
+    border-bottom-color: var(--alert-background-color);
+    right: 18px;
+    top: -14px;
+  }
+
+  &.green::before {
+    border-bottom-color: var(--primary-color);
+  }
+
+  &.black::before {
+    border-bottom-color: var(--black-color);
+  }
+
+  &.coral::before {
+    border-bottom-color: var(--secondary-color);
+  }
+}
+
+.leftTop {
+  &::before {
+    border-right-color: var(--alert-background-color);
+    left: -14px;
+    right: auto;
+    top: 18px;
+  }
+
+  &.green::before {
+    border-right-color: var(--primary-color);
+  }
+
+  &.black::before {
+    border-right-color: var(--black-color);
+  }
+
+  &.coral::before {
+    border-right-color: var(--secondary-color);
+  }
+}

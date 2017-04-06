@@ -1,0 +1,39 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+:root {
+  /* Superjob button typography */
+  --button-font-size: 14px;
+  --button-line-height: 16px;
+
+  /* Superjob colors */
+  --primary-color: #00aa87;
+  --primary-color-hover: #26b698;
+  --primary-color-active: #00886c;
+  --alert-background-color: #e3fffa;
+  --secondary-color: #f05c5c;
+  --secondary-color-hover: #f27474;
+  --secondary-color-active: #c14949;
+  --accent-color: #fec656;
+  --white-color: #fff;
+  --black-color: #000;
+  --dark-primary-color: rgba(0, 0, 0, 0.87);
+  --dark-secondary-color: rgba(0, 0, 0, 0.57);
+  --dark-inactive-color: rgba(0, 0, 0, 0.37);
+  --dark-pressed-color: rgba(0, 0, 0, 0.24);
+  --dark-divider-color: rgba(0, 0, 0, 0.12);
+  --dark-hover-color: rgba(0, 0, 0, 0.05);
+  --light-primary-color: #fff;
+  --light-secondary-color: rgba(255, 255, 255, 0.7);
+  --light-inactive-color: rgba(255, 255, 255, 0.5);
+  --light-pressed-color: rgba(255, 255, 255, 0.12);
+  --light-hover-background-color: rgba(255, 255, 255, 0.05);
+  --alert-border-radius: 3px;
+  --panel-border-radius: 3px;
+}

@@ -1,0 +1,8 @@
+@import '../variables.css';
+
+.root {
+  padding: 16px;
+  background-color: var(--white-color);
+  border-radius: var(--panel-border-radius);
+  box-shadow: 0 2px 2px 0 var(--dark-divider-color), 0 0 2px 0 var(--dark-divider-color);
+}
